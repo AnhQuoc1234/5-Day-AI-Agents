@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Premium Birthday Surprise</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+  <!-- Ambient background glow -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <!-- Audio Controls -->
+  <div class="audio-control">
+    <button class="btn-audio" id="audio-toggle" title="Toggle Music">
+      <!-- Mute/Unmute SVG Icons -->
+      <svg id="audio-icon-off" viewBox="0 0 24 24" width="24" height="24">
+        <path
+          d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-11 5.77v6h4l5 5v-16l-5 5h-4z" />
+      </svg>
+      <svg id="audio-icon-on" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+        <path
+          d="M3 9v6h4l5 5v-16l-5 5h-4zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- 3D Flipping Card -->
+  <div class="card-container">
+    <div class="card" id="birthday-card">
+
+      <!-- Front Side -->
+      <div class="card-face card-front">
+        <div class="card-badge">A Special Message</div>
+
+        <div class="front-main">
+          <h1 class="front-title">HAPPY<br>BIRTHDAY</h1>
+          <div class="gift-icon">🎁</div>
+        </div>
+
+        <div class="tap-prompt">Tap to Open Magic</div>
+      </div>
+
+      <!-- Back / Inside Side -->
+      <div class="card-face card-back">
+        <div class="back-header">
+          <h2 class="wishes-title">Happy Birthday!</h2>
+          <div class="recipient-name" id="recipient-display">Someone Special</div>
+        </div>
+
+        <p class="wishes-text" id="wishes-display">
+          Wishing you a day filled with love, laughter, and all your heart desires. May this year ahead bring you
+          endless joy and beautiful memories!
+        </p>
+
+        <!-- Interactive Birthday Cake -->
+        <div class="cake-container">
+          <div class="cake">
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="flame"></div>
+              </div>
+              <div class="candle">
+                <div class="flame"></div>
+              </div>
+              <div class="candle">
+                <div class="flame"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tap-prompt" style="margin-top: auto; color: rgba(255, 255, 255, 0.4);">
+          Tap candles to make a wish!
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Customization Panel -->
+  <div class="customize-panel">
+    <h3 class="panel-title">Personalize This Card</h3>
+
+    <div class="input-group">
+      <label for="input-name">Recipient's Name</label>
+      <input type="text" id="input-name" placeholder="E.g., Sarah" maxlength="25">
+    </div>
+
+    <div class="input-group">
+      <label for="input-wishes">Your Wish Message</label>
+      <textarea id="input-wishes" placeholder="Write something sweet..." maxlength="250"></textarea>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
